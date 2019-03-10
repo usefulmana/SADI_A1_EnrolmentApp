@@ -1,4 +1,11 @@
 Design patterns list:
 - Singleton
-- Decorator
-- Factory
+- Builder
+- Visitor
+- Command
+- Chain of responsibilities
+- Iterator
+- Observer
+- Facade (maybe)
+- Composite
+- Decorator 
