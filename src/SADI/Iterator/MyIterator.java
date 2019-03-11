@@ -1,6 +1,6 @@
 package SADI.Iterator;
 
-public interface CourseIterator {
+public interface Iteration {
     public boolean hasNext();
     public Object next();
 }
