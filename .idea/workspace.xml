@@ -4,19 +4,39 @@
     <list default="true" id="9e2b2b82-df15-4241-9649-4e2480c5903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Builder/CoursesBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/SemesterAEnrolment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolmentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolmentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Iterator/CourseIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/SADI/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Person/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/SADI/Person/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Builder/CourseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Builder/CourseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Courses/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Iterator/MyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Iterator/MyIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Person/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SADI/Person/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Builder/CourseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/CoR/Chain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolmentManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/CourseUnavailableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/InvalidIDException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/MaxCourseLoadException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Iterator/MyIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Person/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Builder/CourseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/builder/CourseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/CoR/Chain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/cor/Chain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/CourseUnavailableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/CourseUnavailableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/InvalidIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/InvalidIDException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/MaxCourseLoadException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/MaxCourseLoadException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Iterator/MyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/iterator/MyIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Person/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/person/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SADI/Proxy/EnrolmentSystemAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/proxy/EnrolmentSystemAccess.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,58 +45,152 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/README.md">
+                <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                  <state split_layout="SPLIT">
+                    <first_editor relative-caret-position="259">
+                      <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+                    </first_editor>
+                    <second_editor />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2270">
-              <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="208">
-                <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolmentManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Command/Command.java">
+        <entry file="file://$PROJECT_DIR$/src/sadi/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-528">
+              <caret line="169" column="103" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="103" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1594">
+              <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1858#1859#0" expanded="true" />
+                <element signature="e#1892#1893#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#4779#4780#0" expanded="true" />
+                <element signature="e#6649#6650#0" expanded="true" />
+                <element signature="e#3945#3946#0" expanded="true" />
+                <element signature="e#3972#3973#0" expanded="true" />
+                <element signature="e#7868#7869#0" expanded="true" />
+                <element signature="e#7891#7892#0" expanded="true" />
+                <element signature="e#7982#7983#0" expanded="true" />
+                <element signature="e#8004#8005#0" expanded="true" />
+                <element signature="e#8096#8097#0" expanded="true" />
+                <element signature="e#8118#8119#0" expanded="true" />
+                <element signature="e#8207#8208#0" expanded="true" />
+                <element signature="e#8230#8231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/person/StudentList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1586">
+              <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/command/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/person/Student.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2327#2328#0" expanded="true" />
+                <element signature="e#2370#2371#0" expanded="true" />
+                <element signature="e#2401#2402#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Proxy/EnrolmentSystemAccess.java">
+        <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="520">
+              <caret line="44" column="53" lean-forward="true" selection-start-line="43" selection-start-column="107" selection-end-line="44" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,26 +199,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolment.java">
+        <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2339#2340#0" expanded="true" />
-                <element signature="e#2366#2367#0" expanded="true" />
-                <element signature="e#2416#2417#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="1248">
+              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,34 +211,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListA.java">
+        <entry file="file://$PROJECT_DIR$/src/sadi/visitor/Visitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="44" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+            <state relative-caret-position="104">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -150,8 +224,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -188,12 +262,25 @@
         <option value="$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolment.java" />
         <option value="$PROJECT_DIR$/src/SADI/Command/Command.java" />
         <option value="$PROJECT_DIR$/src/SADI/Proxy/EnrolmentSystemAccess.java" />
+        <option value="$PROJECT_DIR$/src/sadi/Command/Command.java" />
+        <option value="$PROJECT_DIR$/src/sadi/cor/Chain.java" />
+        <option value="$PROJECT_DIR$/src/sadi/course/CourseList.java" />
+        <option value="$PROJECT_DIR$/src/sadi/person/Student.java" />
+        <option value="$PROJECT_DIR$/src/sadi/person/StudentList.java" />
+        <option value="$PROJECT_DIR$/src/sadi/course/CourseListA.java" />
+        <option value="$PROJECT_DIR$/src/sadi/course/CourseListB.java" />
+        <option value="$PROJECT_DIR$/src/sadi/course/CourseListC.java" />
+        <option value="$PROJECT_DIR$/src/sadi/command/Command.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/sadi/Main.java" />
+        <option value="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" />
+        <option value="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
+    <option name="x" value="1920" />
+    <option name="y" value="52" />
     <option name="width" value="1920" />
     <option name="height" value="1040" />
   </component>
@@ -205,6 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,76 +310,74 @@
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Builder" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="builder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Command" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="CoR" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="cor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Courses" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Enrollment" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="enrollment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="ErrorHandling" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="errorhandling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Iterator" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="iterator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="s3616128_A1_COSC2440" type="b2602c69:ProjectViewProjectNode" />
               <item name="s3616128_A1_COSC2440" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SADI" type="462c0819:PsiDirectoryNode" />
-              <item name="Person" type="462c0819:PsiDirectoryNode" />
+              <item name="sadi" type="462c0819:PsiDirectoryNode" />
+              <item name="person" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552362601804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552405227665" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -312,7 +399,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="SADI.Main" />
+      <option name="MAIN_CLASS_NAME" value="sadi.Main" />
       <module name="untitled104" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -348,17 +435,18 @@
       <workItem from="1552355568255" duration="531000" />
       <workItem from="1552360739525" duration="9000" />
       <workItem from="1552361271113" duration="1625000" />
+      <workItem from="1552378790353" duration="16494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32997000" />
+    <option name="totallyTimeSpent" value="49491000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
+    <frame x="1920" y="52" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17716116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15154749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -375,9 +463,9 @@
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32896176" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24043716" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32896176" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32890365" />
       <window_info anchor="right" id="Graphical Navigator" internal_type="SLIDING" order="0" type="SLIDING" />
@@ -388,7 +476,7 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="JSON Utils" order="8" />
+      <window_info anchor="right" id="JSON Utils" order="8" weight="0.32977587" />
       <window_info anchor="right" id="Json Parser" order="9" />
       <window_info anchor="right" id="JSON Viewer" order="10" />
       <window_info anchor="right" id="SciView" order="11" />
@@ -396,45 +484,6 @@
       <window_info anchor="right" id="Palette&#9;" order="13" />
       <window_info anchor="right" id="Theme Preview" order="14" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17716116" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="simpleUML" order="7" weight="0.32977587" />
-      <window_info anchor="bottom" id="CheckStyle" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32896176" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.2546448" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32896176" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32890365" />
-      <window_info anchor="right" id="Graphical Navigator" internal_type="SLIDING" order="0" type="SLIDING" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="UML Diagrams" internal_type="SLIDING" order="2" type="SLIDING" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="JSON Utils" order="8" />
-      <window_info anchor="right" id="Json Parser" order="9" />
-      <window_info anchor="right" id="JSON Viewer" order="10" />
-      <window_info anchor="right" id="SciView" order="11" />
-      <window_info anchor="right" id="Database" order="12" />
-      <window_info anchor="right" id="Palette&#9;" order="13" />
-      <window_info anchor="right" id="Theme Preview" order="14" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -482,7 +531,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SADI/Course.java" />
     <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/Enrolment.java" />
-    <entry file="file://$PROJECT_DIR$/src/SADI/ErrorHandling/MaxCourseLoadException.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/errorhandling/MaxCourseLoadException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
@@ -492,7 +541,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/ErrorHandling/InvalidIDException.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/errorhandling/InvalidIDException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
@@ -503,14 +552,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Builder/CourseBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/builder/CourseBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="806">
           <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Iterator/MyIterator.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/iterator/MyIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
@@ -518,7 +567,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/SemesterAEnrolment.java" />
-    <entry file="file://$PROJECT_DIR$/src/SADI/ErrorHandling/CourseUnavailableException.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/errorhandling/CourseUnavailableException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
@@ -530,17 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/EnrolmentSystem.java" />
     <entry file="file://$PROJECT_DIR$/src/SADI/Person/StudentList.java" />
-    <entry file="file://$PROJECT_DIR$/src/SADI/Person/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Courses/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/course/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
@@ -558,68 +597,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/CoR/Chain.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/cor/Chain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="44" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="208">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListC.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="104">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2270">
-          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseListB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2339#2340#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Proxy/EnrolmentSystemAccess.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/proxy/EnrolmentSystemAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
@@ -629,42 +624,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Courses/CourseList.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/visitor/Visitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+        <state relative-caret-position="104">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="208">
-            <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/sadi/person/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+            <element signature="e#2401#2402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolmentManager.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="520">
+          <caret line="44" column="53" lean-forward="true" selection-start-line="43" selection-start-column="107" selection-end-line="44" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SADI/Command/Command.java">
+    <entry file="file://$PROJECT_DIR$/src/sadi/course/CourseListC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="1248">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="259">
+            <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/person/StudentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1586">
+          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1594">
+          <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#4779#4780#0" expanded="true" />
+            <element signature="e#6649#6650#0" expanded="true" />
+            <element signature="e#3945#3946#0" expanded="true" />
+            <element signature="e#3972#3973#0" expanded="true" />
+            <element signature="e#7868#7869#0" expanded="true" />
+            <element signature="e#7891#7892#0" expanded="true" />
+            <element signature="e#7982#7983#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8096#8097#0" expanded="true" />
+            <element signature="e#8118#8119#0" expanded="true" />
+            <element signature="e#8207#8208#0" expanded="true" />
+            <element signature="e#8230#8231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sadi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="169" column="103" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

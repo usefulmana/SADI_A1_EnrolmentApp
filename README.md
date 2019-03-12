@@ -1,14 +1,18 @@
-Design patterns list:
+Design patterns list Implemented
 - Singleton: each semester object need to be unique
 - Builder: course builder
-- Visitor
-- Command: executeEnrol(), executeDrop(), undoEnrol(), undoDrop()
 - Chain of responsibilities: add courses to their respective semseters
-- Iterator: to get courseList and studentList
-- Observer
-- Facade: studentenrolment system is a facade for semester a b c
-- Composite: each semester contain certain amount of course object.
-- Decorator:
-- Proxy: display student enrolments. can be used to display
-students' current enrolments without giving them the ability to set
-anything.
+- Iterator: to studentList
+- Observer: give feedback to students when they enrol or drop a course
+- Flyweight: Student Enrolment 
+- Command: enrol, drop and undo function
+
+
+Not yet implemented:
+- Visitor
+
+
+Under consideration:
+-
+-
+
