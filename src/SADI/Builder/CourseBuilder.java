@@ -2,28 +2,28 @@ package SADI.Builder;
 
 import SADI.Courses.Course;
 
-public final class CoursesBuilder {
+public final class CourseBuilder {
     private String courseId;
     private String courseName;
     private int credits;
 
-    public CoursesBuilder(String courseId, String courseName, int credits) {
+    public CourseBuilder(String courseId, String courseName, int credits) {
         this.courseId = courseId;
         this.courseName =  courseName;
         this.credits = credits;
     }
 
-    public CoursesBuilder setCourseId(String courseId) {
+    public CourseBuilder setCourseId(String courseId) {
         this.courseId = courseId;
         return this;
     }
 
-    public CoursesBuilder setCourseName(String courseName) {
+    public CourseBuilder setCourseName(String courseName) {
         this.courseName = courseName;
         return this;
     }
 
-    public CoursesBuilder setCredits(int credits) {
+    public CourseBuilder setCredits(int credits) {
         this.credits = credits;
         return this;
     }

@@ -1,6 +1,8 @@
 package SADI.Command;
 
 public interface Command {
-    public void execute();
-    public void undo();
+    public void executeEnrol();
+    public void undoEnrol();
+    public void executeDrop();
+    public void undoDrop();
 }

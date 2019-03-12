@@ -1,17 +1,31 @@
 package SADI.Courses;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Course {
     private String courseId;
     private String courseName;
     private int credits;
+    private String availability;
+    private static List<Course> courseList = new ArrayList<>();
 
     public Course(String courseId, String courseName, int credits) {
         this.courseId = courseId;
         this.courseName = courseName;
         this.credits = credits;
+        courseList.add(this);
     }
+
+    public static List<Course> getCourseList() {
+        return courseList;
+    }
+
+    public static void setCourseList(List<Course> courseList) {
+        Course.courseList = courseList;
+    }
+
 
     public void setCourseId(String courseId) {
         this.courseId = courseId;
@@ -35,6 +49,14 @@ public class Course {
 
     public int getCredits() {
         return credits;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
     @Override

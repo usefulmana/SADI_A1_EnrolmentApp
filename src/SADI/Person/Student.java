@@ -1,8 +1,6 @@
 package SADI.Person;
 
-
 import SADI.Courses.Course;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -10,12 +8,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Student {
+public class Student{
     private String id;
     private String name;
     private Date birthday;
     private static List<Student> studentList = new ArrayList<>();
-    private List<Course> courses = new ArrayList<>();
+
 
     public Student(String id, String name) {
         this.id = id;
@@ -55,9 +53,22 @@ public class Student {
         }
     }
 
-    public void printStudentList(){
+    public static Student searchStudent(String studentID)
+    {
         for (int i = 0; i < studentList.size(); i++) {
-            System.out.println(studentList.get(i));
+            if(studentList.get(i).getId().equals(studentID))
+            {
+                return studentList.get(i);
+            }
+        }
+        return null;
+    }
+
+
+    public static void printStudentInfo()
+    {
+        for (int i = 0; i < studentList.size(); i++) {
+            System.out.println(studentList.get(i).getId() + "         " + studentList.get(i).getName());
         }
     }
 
