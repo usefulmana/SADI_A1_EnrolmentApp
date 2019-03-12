@@ -6,6 +6,7 @@ import sadi.course.CourseListA;
 import sadi.course.CourseListB;
 import sadi.course.CourseListC;
 import sadi.person.Student;
+import sadi.person.StudentList;
 
 import java.util.*;
 
@@ -263,6 +264,37 @@ public class StudentEnrolment implements StudentEnrolmentManager, Command {
         else
         {
             return false;
+        }
+    }
+
+    public void printAllEnrolments(String semester)
+    {
+        if(semester.equals("A"))
+        {
+            for (String key: cache.keySet()
+                 ) {
+                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
+                cache.get(key).viewSemesterACourse();
+                System.out.println("---------------------------------------------");
+            }
+        }
+        else if(semester.equals("B")){
+            for (String key: cache.keySet()
+            ) {
+                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
+                cache.get(key).viewSemesterBCourse();
+                System.out.println("---------------------------------------------");
+            }
+
+        }
+        else if(semester.equals("C"))
+        {
+            for (String key: cache.keySet()
+            ) {
+                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
+                cache.get(key).viewSemesterCCourse();
+                System.out.println("---------------------------------------------");
+            }
         }
     }
 

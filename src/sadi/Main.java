@@ -309,6 +309,31 @@ public class Main {
                             }
                             break;
                         case 5:
+                            System.out.println("Please choose a semester");
+                            System.out.print("1. A\n" + "2. B\n" + "3. C\n" + "4. Return\n" + "5. Quit program\n" + "Your choice: ");
+                            Scanner scanner3 = new Scanner(System.in);
+                            int choiceViewAll = scanner3.nextInt();
+                            switch (choiceViewAll)
+                            {
+                                case 1:
+                                    studentEnrolment.printAllEnrolments("A");
+                                    break;
+                                case 2:
+                                    studentEnrolment.printAllEnrolments("B");
+                                    break;
+                                case 3:
+                                    studentEnrolment.printAllEnrolments("C");
+                                    break;
+                                case 4:
+                                    break;
+                                case 5:
+                                    System.out.println("Program exits. Have a good day!");
+                                    System.exit(0);
+                                    break;
+                                default:
+                                    System.out.println("No such choice available. Please try again");
+                                    break;
+                            }
                             break;
                         case 6:
                             System.out.println("Program exits. Have a good day!");

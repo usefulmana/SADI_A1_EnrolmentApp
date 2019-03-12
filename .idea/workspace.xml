@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e2b2b82-df15-4241-9649-4e2480c5903b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Builder/CourseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/CoR/Chain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Courses/CourseListC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Enrollment/StudentEnrolmentManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/CourseUnavailableException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/InvalidIDException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/ErrorHandling/MaxCourseLoadException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Iterator/MyIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/SADI/Person/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Builder/CourseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/builder/CourseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/CoR/Chain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/cor/Chain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Courses/CourseListC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/course/CourseListC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Enrollment/StudentEnrolmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/CourseUnavailableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/CourseUnavailableException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/InvalidIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/InvalidIDException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/ErrorHandling/MaxCourseLoadException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/errorhandling/MaxCourseLoadException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Iterator/MyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/iterator/MyIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Person/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/person/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SADI/Proxy/EnrolmentSystemAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/proxy/EnrolmentSystemAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sadi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sadi/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-528">
-              <caret line="169" column="103" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="103" />
+            <state relative-caret-position="968">
+              <caret line="335" column="29" lean-forward="true" selection-start-line="335" selection-start-column="29" selection-end-line="335" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,26 +51,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1594">
-              <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+            <state relative-caret-position="494">
+              <caret line="286" column="9" lean-forward="true" selection-start-line="286" selection-start-column="9" selection-end-line="286" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1858#1859#0" expanded="true" />
                 <element signature="e#1892#1893#0" expanded="true" />
                 <element signature="e#1943#1944#0" expanded="true" />
                 <element signature="e#1989#1990#0" expanded="true" />
-                <element signature="e#4779#4780#0" expanded="true" />
-                <element signature="e#6649#6650#0" expanded="true" />
+                <element signature="e#4811#4812#0" expanded="true" />
+                <element signature="e#6681#6682#0" expanded="true" />
                 <element signature="e#3945#3946#0" expanded="true" />
                 <element signature="e#3972#3973#0" expanded="true" />
-                <element signature="e#7868#7869#0" expanded="true" />
-                <element signature="e#7891#7892#0" expanded="true" />
-                <element signature="e#7982#7983#0" expanded="true" />
-                <element signature="e#8004#8005#0" expanded="true" />
-                <element signature="e#8096#8097#0" expanded="true" />
-                <element signature="e#8118#8119#0" expanded="true" />
-                <element signature="e#8207#8208#0" expanded="true" />
-                <element signature="e#8230#8231#0" expanded="true" />
+                <element signature="e#9987#9988#0" expanded="true" />
+                <element signature="e#10099#10100#0" expanded="true" />
+                <element signature="e#10213#10214#0" expanded="true" />
+                <element signature="e#10325#10326#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -272,9 +235,9 @@
         <option value="$PROJECT_DIR$/src/sadi/course/CourseListC.java" />
         <option value="$PROJECT_DIR$/src/sadi/command/Command.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/sadi/Main.java" />
-        <option value="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" />
         <option value="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolmentManager.java" />
+        <option value="$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java" />
+        <option value="$PROJECT_DIR$/src/sadi/Main.java" />
       </list>
     </option>
   </component>
@@ -377,7 +340,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552405227665" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552407601456" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -435,18 +398,18 @@
       <workItem from="1552355568255" duration="531000" />
       <workItem from="1552360739525" duration="9000" />
       <workItem from="1552361271113" duration="1625000" />
-      <workItem from="1552378790353" duration="16494000" />
+      <workItem from="1552378790353" duration="18779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49491000" />
+    <option name="totallyTimeSpent" value="51776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="52" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15154749" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15154749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -467,7 +430,7 @@
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32896176" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32890365" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32786885" />
       <window_info anchor="right" id="Graphical Navigator" internal_type="SLIDING" order="0" type="SLIDING" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="UML Diagrams" internal_type="SLIDING" order="2" type="SLIDING" />
@@ -735,34 +698,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sadi/enrollment/StudentEnrolment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1594">
-          <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+        <state relative-caret-position="494">
+          <caret line="286" column="9" lean-forward="true" selection-start-line="286" selection-start-column="9" selection-end-line="286" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1858#1859#0" expanded="true" />
             <element signature="e#1892#1893#0" expanded="true" />
             <element signature="e#1943#1944#0" expanded="true" />
             <element signature="e#1989#1990#0" expanded="true" />
-            <element signature="e#4779#4780#0" expanded="true" />
-            <element signature="e#6649#6650#0" expanded="true" />
+            <element signature="e#4811#4812#0" expanded="true" />
+            <element signature="e#6681#6682#0" expanded="true" />
             <element signature="e#3945#3946#0" expanded="true" />
             <element signature="e#3972#3973#0" expanded="true" />
-            <element signature="e#7868#7869#0" expanded="true" />
-            <element signature="e#7891#7892#0" expanded="true" />
-            <element signature="e#7982#7983#0" expanded="true" />
-            <element signature="e#8004#8005#0" expanded="true" />
-            <element signature="e#8096#8097#0" expanded="true" />
-            <element signature="e#8118#8119#0" expanded="true" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8230#8231#0" expanded="true" />
+            <element signature="e#9987#9988#0" expanded="true" />
+            <element signature="e#10099#10100#0" expanded="true" />
+            <element signature="e#10213#10214#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sadi/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528">
-          <caret line="169" column="103" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="103" />
+        <state relative-caret-position="968">
+          <caret line="335" column="29" lean-forward="true" selection-start-line="335" selection-start-column="29" selection-end-line="335" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
