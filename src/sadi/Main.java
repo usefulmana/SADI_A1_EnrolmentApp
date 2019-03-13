@@ -16,7 +16,6 @@ import sadi.course.*;
 import sadi.enrollment.StudentEnrolment;
 import sadi.person.Student;
 import sadi.person.StudentList;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -125,17 +124,18 @@ public class Main {
                                     Course course3 = CourseListA.courseSearch(courseID.toUpperCase());
                                     if (course3 != null) {
                                         studentEnrolment.executeEnrol(course3, "A");
-                                    } else {
+                                        if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
+                                        {
+                                            studentEnrolment.undoEnrol(course3,"A");
+                                        }
+                                        if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
+                                        {
+                                            break;
+                                        }
+                                    }
+                                    else {
                                         System.out.println("Wrong Course ID.");
-                                    }
-                                    if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
-                                    {
-                                        studentEnrolment.undoEnrol(course3,"A");
-                                    }
-                                    if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
-                                    {
-                                        break;
-                                    }
+                                       }
                                     }
                                     break;
                                 case 2:
@@ -148,17 +148,18 @@ public class Main {
                                     Course course4 = CourseListB.courseSearch(courseID1.toUpperCase());
                                     if (course4 != null) {
                                         studentEnrolment.executeEnrol(course4, "B");
+                                        if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
+                                        {
+                                            studentEnrolment.undoEnrol(course4,"B");
+                                        }
+                                        if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
+                                        {
+                                            break;
+                                        }
                                     } else {
                                         System.out.println("Wrong Course ID.");
                                     }
-                                    if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
-                                    {
-                                        studentEnrolment.undoEnrol(course4,"B");
-                                    }
-                                    if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
-                                    {
-                                        break;
-                                    }
+
                                     }
                                     break;
                                 case 3:
@@ -170,9 +171,7 @@ public class Main {
                                     Course course5 = CourseListC.courseSearch(courseID5.toUpperCase());
                                     if (course5 != null) {
                                         studentEnrolment.executeEnrol(course5, "C");
-                                    } else {
-                                        System.out.println("Wrong Course ID.");
-                                    }
+
                                         if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
                                         {
                                             studentEnrolment.undoEnrol(course5,"C");
@@ -181,6 +180,9 @@ public class Main {
                                         {
                                             break;
                                         }
+                                    } else {
+                                        System.out.println("Wrong Course ID.");
+                                    }
                                     }
                                     break;
                                 case 4:
@@ -201,7 +203,7 @@ public class Main {
                             switch (choiceDropA) {
                                 case 1:
                                     while(true){
-                                        if(studentEnrolment.viewSemesterACourse())
+                                        if(studentEnrolment.viewASemesterCourses("A"))
                                         {
                                         System.out.print("Enter course ID: ");
                                         Scanner scanner7 = new Scanner(System.in);
@@ -209,17 +211,18 @@ public class Main {
                                         Course course7 = CourseListA.courseSearch(courseID.toUpperCase());
                                         if (course7 != null) {
                                             studentEnrolment.executeDrop(course7, "A");
-                                        } else {
-                                            System.out.println("Wrong Course ID.");
-                                        }
                                             if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
                                             {
                                                 studentEnrolment.undoDrop(course7,"A");
                                             }
-                                        if(!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: "))
-                                        {
-                                            break;
+                                            if(!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: "))
+                                            {
+                                                break;
+                                            }
+                                        } else {
+                                            System.out.println("Wrong Course ID.");
                                         }
+
                                     }
                                         else
                                         {
@@ -232,24 +235,25 @@ public class Main {
                                 case 2:
                                     while(true)
                                     {
-                                        if(studentEnrolment.viewSemesterBCourse()){
+                                        if(studentEnrolment.viewASemesterCourses("B")){
                                         System.out.print("Enter course ID: ");
                                         Scanner scanner8 = new Scanner(System.in);
                                         String courseID8 = scanner8.nextLine();
                                         Course course8 = CourseListB.courseSearch(courseID8.toUpperCase());
                                         if (course8 != null) {
                                             studentEnrolment.executeDrop(course8, "B");
-                                        } else {
-                                            System.out.println("Wrong Course ID.");
-                                        }
                                             if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
                                             {
                                                 studentEnrolment.undoEnrol(course8,"B");
                                             }
-                                        if(!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: "))
-                                        {
-                                            break;
+                                            if(!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: "))
+                                            {
+                                                break;
+                                            }
+                                        } else {
+                                            System.out.println("Wrong Course ID.");
                                         }
+
                                     }
                                         else{
                                             System.out.println("Student is not currently enroled in any course this semester");
@@ -260,24 +264,25 @@ public class Main {
                                     break;
                                 case 3:
                                     while(true){
-                                        if(studentEnrolment.viewSemesterCCourse()){
+                                        if(studentEnrolment.viewASemesterCourses("C")){
                                         System.out.print("Enter course ID: ");
                                         Scanner scanner5 = new Scanner(System.in);
                                         String courseID5 = scanner5.nextLine();
                                         Course course5 = CourseListC.courseSearch(courseID5.toUpperCase());
                                         if (course5 != null) {
-                                            studentEnrolment.enrol(course5, "C");
-                                        } else {
-                                            System.out.println("Wrong Course ID.");
-                                        }
+                                            studentEnrolment.executeDrop(course5, "C");
                                             if(StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: "))
                                             {
                                                 studentEnrolment.undoEnrol(course5,"C");
                                             }
-                                        if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
-                                        {
-                                            break;
+                                            if(!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: "))
+                                            {
+                                                break;
+                                            }
+                                        } else {
+                                            System.out.println("Wrong Course ID.");
                                         }
+
                                         }
                                         else{
                                             System.out.println("Student is not currently enroled in any course this semester");
@@ -309,6 +314,7 @@ public class Main {
                             }
                             break;
                         case 5:
+                            while(true){
                             System.out.println("Please choose a semester");
                             System.out.print("1. A\n" + "2. B\n" + "3. C\n" + "4. Return\n" + "5. Quit program\n" + "Your choice: ");
                             Scanner scanner3 = new Scanner(System.in);
@@ -333,6 +339,12 @@ public class Main {
                                 default:
                                     System.out.println("No such choice available. Please try again");
                                     break;
+
+                            }
+                                if(!StudentEnrolment.continuePrompt("View another semester (Y/n)?: "))
+                                {
+                                    break;
+                                }
                             }
                             break;
                         case 6:

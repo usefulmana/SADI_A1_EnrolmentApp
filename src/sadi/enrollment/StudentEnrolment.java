@@ -206,38 +206,41 @@ public class StudentEnrolment implements StudentEnrolmentManager, Command {
                 '}';
     }
 
-    public boolean viewSemesterACourse()
+    public boolean viewASemesterCourses(String semester)
     {
-        if(studentCourseA.size() > 0)
+        if(semester.equals("A"))
         {
-        for (int i = 0; i < studentCourseA.size(); i++) {
-            System.out.println(studentCourseA.get(i).getCourseId() + " - " + studentCourseA.get(i).getCourseName() + " - " +
-                    studentCourseA.get(i).getCredits());
+            if(studentCourseA.size() > 0)
+            {
+                for (int i = 0; i < studentCourseA.size(); i++) {
+                    System.out.println(studentCourseA.get(i).getCourseId() + " - " + studentCourseA.get(i).getCourseName() + " - " +
+                            studentCourseA.get(i).getCredits());
+                }
+                return true;
             }
-            return true;
+            return false;
         }
-        return false;
-    }
-
-    public boolean viewSemesterCCourse()
-    {
-        if(studentCourseC.size()>0){
-        for (int i = 0; i < studentCourseC.size(); i++) {
-            System.out.println(studentCourseC.get(i).getCourseId() + " - " + studentCourseC.get(i).getCourseName()+ " - " +
-                    studentCourseC.get(i).getCredits());
-        }
-        return true;
-        }
-        return false;
-    }
-    public boolean viewSemesterBCourse()
-    {
-        if(studentCourseB.size()>0){
-            for (int i = 0; i < studentCourseB.size(); i++) {
-                System.out.println(studentCourseB.get(i).getCourseId() + " - " + studentCourseB.get(i).getCourseName()+ " - " +
-                        studentCourseB.get(i).getCredits());
+        else if(semester.equals("B"))
+        {
+            if(studentCourseB.size()>0){
+                for (int i = 0; i < studentCourseB.size(); i++) {
+                    System.out.println(studentCourseB.get(i).getCourseId() + " - " + studentCourseB.get(i).getCourseName()+ " - " +
+                            studentCourseB.get(i).getCredits());
+                }
+                return true;
             }
-            return true;
+            return false;
+        }
+        else if(semester.equals("C"))
+        {
+            if(studentCourseC.size()>0){
+                for (int i = 0; i < studentCourseC.size(); i++) {
+                    System.out.println(studentCourseC.get(i).getCourseId() + " - " + studentCourseC.get(i).getCourseName()+ " - " +
+                            studentCourseC.get(i).getCredits());
+                }
+                return true;
+            }
+            return false;
         }
         return false;
     }
@@ -245,11 +248,11 @@ public class StudentEnrolment implements StudentEnrolmentManager, Command {
     public void viewAllCourses()
     {
         System.out.println("Semester A");
-        viewSemesterACourse();
+        viewASemesterCourses("A");
         System.out.println("Semester B");
-        viewSemesterBCourse();
+        viewASemesterCourses("B");
         System.out.println("Semester C");
-        viewSemesterCCourse();
+        viewASemesterCourses("C");
     }
 
     public static boolean continuePrompt(String message)
@@ -269,32 +272,11 @@ public class StudentEnrolment implements StudentEnrolmentManager, Command {
 
     public void printAllEnrolments(String semester)
     {
-        if(semester.equals("A"))
-        {
-            for (String key: cache.keySet()
-                 ) {
-                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
-                cache.get(key).viewSemesterACourse();
-                System.out.println("---------------------------------------------");
-            }
-        }
-        else if(semester.equals("B")){
-            for (String key: cache.keySet()
-            ) {
-                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
-                cache.get(key).viewSemesterBCourse();
-                System.out.println("---------------------------------------------");
-            }
-
-        }
-        else if(semester.equals("C"))
-        {
-            for (String key: cache.keySet()
-            ) {
-                System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
-                cache.get(key).viewSemesterCCourse();
-                System.out.println("---------------------------------------------");
-            }
+        for (String key: cache.keySet()
+             ) {
+            System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
+            cache.get(key).viewASemesterCourses(semester);
+            System.out.println("---------------------------------------------");
         }
     }
 
