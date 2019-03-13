@@ -32,7 +32,7 @@ public class CourseListA implements CourseList, Chain {
         return INSTANCE;
     }
 
-    public List<Course> getCourseList() {
+    public static List<Course> getCourseList() {
         return courseList;
     }
 

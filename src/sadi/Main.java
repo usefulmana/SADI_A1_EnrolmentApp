@@ -14,6 +14,7 @@ import sadi.command.Command;
 import sadi.cor.Chain;
 import sadi.course.*;
 import sadi.enrollment.StudentEnrolment;
+import sadi.enrollment.StudentEnrolmentVisitor;
 import sadi.person.Student;
 import sadi.person.StudentFactory;
 import sadi.person.StudentList;
@@ -94,7 +95,7 @@ public class Main {
             /* Iterating through the StudentList object*/
             while (studentList.hasNext())
             {
-                studentEnrolmentList.add(new StudentEnrolment(studentList.next()));
+                studentEnrolmentList.add(new StudentEnrolment(studentList.next(),48));
             }
             while (true) {
                 StudentList.printStudentInfo();
@@ -107,13 +108,14 @@ public class Main {
                     try {
                         StudentEnrolment studentEnrolment = StudentEnrolment.getStudentEnrolment(studentID);
                         System.out.print("**************************************\n"
-                                +
-                                "1. Enrol in a course\n" +
+                                +"RMIT Student Enrolment System\n"+
+                                "1. Enrol student in a course\n" +
                                 "2. Drop a course\n" +
                                 "3. Update enrolments\n" +
                                 "4. View all current enrolments of the current student\n" +
                                 "5. View enrolments of all students in a particular semester\n" +
-                                "6. Quit\n" +
+                                "6. Drop student from all courses \n" +
+                                "7. Quit\n"+
                                 "Your choice: ");
                         Scanner scanner1 = new Scanner(System.in);
                         int choice = scanner1.nextInt();
@@ -417,6 +419,14 @@ public class Main {
                                 }
                                 break;
                             case 6:
+                                if(StudentEnrolment.continuePrompt("Are you sure you want to drop all courses(Y/n)? "))
+                                {
+                                    StudentEnrolmentVisitor studentEnrolmentDeleter = new StudentEnrolmentVisitor(studentID);
+                                    studentEnrolmentDeleter.visit(studentEnrolment);
+                                }
+
+                                break;
+                            case 7:
                                 System.out.println("Program exits. Have a good day!");
                                 System.exit(0);
                                 break;

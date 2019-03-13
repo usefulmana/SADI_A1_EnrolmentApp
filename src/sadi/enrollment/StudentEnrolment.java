@@ -7,11 +7,13 @@ import sadi.course.CourseListB;
 import sadi.course.CourseListC;
 import sadi.person.Student;
 import sadi.person.StudentList;
+import sadi.visitor.Visitable;
+import sadi.visitor.Visitor;
 
 import java.util.*;
 
 
-public class StudentEnrolment extends StudentEnrolmentManager implements Command {
+public class StudentEnrolment extends StudentEnrolmentManager implements Command, Visitable {
     private Student student;
     private static List<Student> studentSubscribers = new ArrayList<>();
     private CourseListA courseListA = CourseListA.getINSTANCE();
@@ -21,12 +23,13 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     private List<Course> studentCourseB = new ArrayList<>();
     private List<Course> studentCourseC = new ArrayList<>();
     private static Map<String,StudentEnrolment> cache = new HashMap<>();
-    private int creditLimit = 48;
+    private int creditLimit;
     public StudentEnrolment() {
     }
 
-    public StudentEnrolment(Student student) {
+    public StudentEnrolment(Student student,int creditLimit) {
         this.student = student;
+        this.creditLimit =creditLimit;
         cache.put(student.getId(),this);
     }
 
@@ -62,6 +65,30 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         return false;
     }
 
+    public List<Course> getStudentCourseA() {
+        return studentCourseA;
+    }
+
+    public void setStudentCourseA(List<Course> studentCourseA) {
+        this.studentCourseA = studentCourseA;
+    }
+
+    public List<Course> getStudentCourseB() {
+        return studentCourseB;
+    }
+
+    public void setStudentCourseB(List<Course> studentCourseB) {
+        this.studentCourseB = studentCourseB;
+    }
+
+    public List<Course> getStudentCourseC() {
+        return studentCourseC;
+    }
+
+    public void setStudentCourseC(List<Course> studentCourseC) {
+        this.studentCourseC = studentCourseC;
+    }
+
     public int getCreditLimit() {
         return creditLimit;
     }
@@ -70,9 +97,9 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         this.creditLimit = creditLimit;
     }
 
-    @Override
     public void enrol(Course course, String semester) {
-        if (courseListA.getCourseList().contains(course) && semester.equals("A") && !studentCourseA.contains(course) && creditLimit(studentCourseA))
+        if (courseListA.getCourseList().contains(course) && semester.equals("A") && !studentCourseA.contains(course) && creditLimit(studentCourseA)
+        && !studentCourseB.contains(course) && !studentCourseC.contains(course))
         {
             studentCourseA.add(course);
             for (Student student: studentSubscribers
@@ -92,7 +119,8 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         {
             System.out.println("Students are not allowed to take more than 48 credits per semester");
         }
-        if(courseListB.getCourseList().contains(course) && semester.equals("B") && !studentCourseB.contains(course) && creditLimit(studentCourseB))
+        if(courseListB.getCourseList().contains(course) && semester.equals("B") && !studentCourseB.contains(course) && creditLimit(studentCourseB)
+                && !studentCourseA.contains(course) && !studentCourseC.contains(course))
         {
             studentCourseB.add(course);
             for (Student student: studentSubscribers
@@ -112,7 +140,9 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         {
             System.out.println("Students are not allowed to take more than 48 credits per semester");
         }
-        if(courseListC.getCourseList().contains(course) && semester.equals("C") && !studentCourseC.contains(course) && creditLimit(studentCourseC))
+
+        if(courseListC.getCourseList().contains(course) && semester.equals("C") && !studentCourseC.contains(course) && creditLimit(studentCourseC)
+                && !studentCourseB.contains(course) && !studentCourseA.contains(course))
         {
             studentCourseC.add(course);
             for (Student student: studentSubscribers
@@ -327,5 +357,10 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     @Override
     public void undoDrop(Course course, String semester) {
         enrol(course,semester);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }
