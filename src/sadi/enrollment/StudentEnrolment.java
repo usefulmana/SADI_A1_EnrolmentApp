@@ -11,7 +11,7 @@ import sadi.person.StudentList;
 import java.util.*;
 
 
-public class StudentEnrolment implements StudentEnrolmentManager, Command {
+public class StudentEnrolment extends StudentEnrolmentManager implements Command {
     private Student student;
     private static List<Student> studentSubscribers = new ArrayList<>();
     private CourseListA courseListA = CourseListA.getINSTANCE();
@@ -180,11 +180,6 @@ public class StudentEnrolment implements StudentEnrolmentManager, Command {
                 }
             }
         }
-    }
-
-    @Override
-    public void update(Course oldCourse, Course newCourse, String semester) {
-
     }
 
     @Override

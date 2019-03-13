@@ -15,6 +15,7 @@ import sadi.cor.Chain;
 import sadi.course.*;
 import sadi.enrollment.StudentEnrolment;
 import sadi.person.Student;
+import sadi.person.StudentFactory;
 import sadi.person.StudentList;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,19 +59,19 @@ public class Main {
 
 
         /* Creating students */
-        Student student1 = new Student("s1234567","Emily Nguyen");
+        Student student1 = StudentFactory.createStudent("s1234567","Emily Nguyen");
         student1.setBirthday("18-04-1999");
         student1.subscribe();
-        Student student2 = new Student("s6549871", "Bob Le");
+        Student student2 = StudentFactory.createStudent("s1234568", "Bob Le");
         student2.setBirthday("23-11-2000");
         student2.subscribe();
-        Student student3 = new Student("s9876541", "Hannah Tran");
+        Student student3 = StudentFactory.createStudent("s1234569","Hannah Tran");
         student3.setBirthday("11-07-1996");
         student3.subscribe();
-        Student student4 = new Student("s9845673","Vincent Tran");
+        Student student4 = StudentFactory.createStudent("s9876543","Vincent Tran");
         student4.setBirthday("07-12-1999");
         student4.subscribe();
-        Student student5 = new Student("s6784563","Alexandra Smith");
+        Student student5 = StudentFactory.createStudent("s9876542","Alexandra Scott");
         student5.setBirthday("12-12-1997");
         student5.subscribe();
 

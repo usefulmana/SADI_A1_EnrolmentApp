@@ -6,6 +6,8 @@ Design patterns list Implemented
 - Observer: give feedback to students when they enrol or drop a course
 - Flyweight: Student Enrolment 
 - Command: enrol, drop and undo function
+- Factory: Student factory
+- Template Method: final class in studentManager
 
 
 Not yet implemented:
@@ -13,6 +15,5 @@ Not yet implemented:
 
 
 Under consideration:
--
 -
 
