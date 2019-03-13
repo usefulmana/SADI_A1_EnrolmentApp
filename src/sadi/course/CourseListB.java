@@ -19,15 +19,12 @@ public class CourseListB implements CourseList, MyIterator,Chain {
 
     @Override
     public void addCourse(List<Course> courses) {
-        List<Course> tempList = new ArrayList<>();
         for (int i = 0; i < courses.size(); i++) {
             if (courses.get(i).getAvailability().contains("B")) {
                 courseList.add(courses.get(i));
-            } else {
-                tempList.add(courses.get(i));
             }
         }
-        nextInChain.addCourse(tempList);
+        nextInChain.addCourse(courses);
     }
 
     private CourseListB(){}

@@ -142,9 +142,43 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         StudentEnrolment.studentSubscribers = studentSubscribers;
     }
 
+    public Course studentCourseSearch(String courseID, String semester)
+    {
+        if(semester.equals("A"))
+        {
+            for (int i = 0; i < studentCourseA.size(); i++) {
+                if(studentCourseA.get(i).getCourseId().equals(courseID))
+                {
+                    return studentCourseA.get(i);
+                }
+            }
+            return null;
+        }
+        else if(semester.equals("B"))
+        {
+            for (int i = 0; i < studentCourseB.size(); i++) {
+                if(studentCourseB.get(i).getCourseId().equals(courseID))
+                {
+                    return studentCourseB.get(i);
+                }
+            }
+            return null;
+        }
+        else if(semester.equals("C"))
+        {
+            for (int i = 0; i < studentCourseC.size(); i++) {
+                if(studentCourseC.get(i).getCourseId().equals(courseID))
+                {
+                    return studentCourseC.get(i);
+                }
+            }
+        }
+        return null;
+    }
+
     @Override
     public void drop(Course course, String semester) {
-        if (semester.equals("A") && studentCourseA.contains(course))
+        if (semester.equals("A"))
         {
             studentCourseA.remove(course);
             for (Student student: studentSubscribers
@@ -156,7 +190,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
                 }
             }
         }
-        if(semester.equals("B") && studentCourseB.contains(course))
+        if(semester.equals("B"))
         {
             studentCourseB.remove(course);
             for (Student student: studentSubscribers
@@ -168,7 +202,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
                 }
             }
         }
-        if(semester.equals("C") && studentCourseC.contains(course))
+        if(semester.equals("C"))
         {
             studentCourseC.remove(course);
             for (Student student: studentSubscribers

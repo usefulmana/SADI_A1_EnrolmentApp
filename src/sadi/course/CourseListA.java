@@ -18,15 +18,12 @@ public class CourseListA implements CourseList, Chain {
 
     @Override
     public void addCourse(List<Course> courses){
-        List<Course> tempList = new ArrayList<>();
         for (int i = 0; i < courses.size(); i++) {
             if (courses.get(i).getAvailability().contains("A")) {
                 courseList.add(courses.get(i));
-            } else {
-                tempList.add(courses.get(i));
             }
         }
-        nextInChain.addCourse(tempList);
+        nextInChain.addCourse(courses);
     }
 
     private CourseListA(){}
