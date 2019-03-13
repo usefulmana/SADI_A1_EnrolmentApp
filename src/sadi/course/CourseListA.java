@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseListA implements CourseList, Chain {
+    // Store all semester A courses
     private String semester = "A";
     private static List<Course> courseList = new ArrayList<>();
     private static CourseListA INSTANCE = new CourseListA();
@@ -37,6 +38,7 @@ public class CourseListA implements CourseList, Chain {
     }
 
     public static void printCourseList() {
+        // Displaying courses available in semester A
         for (int i = 0; i < courseList.size(); i++) {
             System.out.println(courseList.get(i).getCourseId() + " - " + courseList.get(i).getCourseName() + " - " +
                     courseList.get(i).getCourseId());
@@ -44,6 +46,7 @@ public class CourseListA implements CourseList, Chain {
     }
 
     public static Course courseSearch (String courseID){
+        // Searching if a course is available in semester A
         for (int i = 0; i < courseList.size(); i++) {
             if(courseList.get(i).getCourseId().equals(courseID))
             {

@@ -6,7 +6,7 @@ import sadi.iterator.MyIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseListB implements CourseList, MyIterator,Chain {
+public class CourseListB implements CourseList,Chain{
     private String semester = "B";
     private static List<Course> courseList = new ArrayList<>();
     private static CourseListB INSTANCE = new CourseListB();
@@ -68,15 +68,6 @@ public class CourseListB implements CourseList, MyIterator,Chain {
         }
     }
 
-    @Override
-    public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public Object next() {
-        return null;
-    }
 
     public List<Course> getCourseList() {
         return courseList;

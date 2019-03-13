@@ -1,7 +1,8 @@
 /*
  * Author: Nguyen Le Bao Anh
  * Created on: 27/02/2019
- * Last updated on: 13/03/2019
+ * Last updated on: 14/03/2019
+ * GitHub Repo: https://github.com/usefulmana/SADI_A1_EnrolmentApp
  * This is the submission file for assignment I of COSC2440- sadi.
  * This is a console application written in Java 11. This application will allow staffs to enroll students in courses
  * available in the corresponding semesters. It also allows staffs to update, delete, and show enrollments of all
@@ -13,8 +14,8 @@ import sadi.builder.CourseBuilder;
 import sadi.command.Command;
 import sadi.cor.Chain;
 import sadi.course.*;
-import sadi.enrollment.StudentEnrolment;
-import sadi.enrollment.StudentEnrolmentVisitor;
+import sadi.enrollment.StudentEnrollment;
+import sadi.enrollment.StudentEnrollmentVisitor;
 import sadi.person.Student;
 import sadi.person.StudentFactory;
 import sadi.person.StudentList;
@@ -27,37 +28,24 @@ public class Main {
 
     public static void main(String[] args) {
         /* Building courses */
-        Course webProgramming = new CourseBuilder("COSC2430","Web Programming",12).build();
-        webProgramming.setAvailability("AC");
+        Course webProgramming = new CourseBuilder("COSC2430","Web Programming",12,"AC").build();
         Course softwareArchitecture = new CourseBuilder("COSC2440","Software Architecture: Design &" +
-                " Implementation",12).build();
-        softwareArchitecture.setAvailability("A");
-        Course cppProgramming = new CourseBuilder("COSC2131","Programming Using C++",12).build();
-        cppProgramming.setAvailability("A");
-        Course database = new CourseBuilder("ISYS2077","Database Concepts",12).build();
-        database.setAvailability("A");
+                " Implementation",12,"A").build();
+        Course cppProgramming = new CourseBuilder("COSC2131","Programming Using C++",12,"A").build();
+        Course database = new CourseBuilder("ISYS2077","Database Concepts",12,"A").build();
         Course softEnProcess = new CourseBuilder("COSC2101","Software Engineering: Process &" +
-                " Tools",12).build();
-        softEnProcess.setAvailability("B");
-        Course buildingITSys = new CourseBuilder("COSC2634","Building IT Systems", 12).build();
-        buildingITSys.setAvailability("C");
+                " Tools",12,"B").build();
+        Course buildingITSys = new CourseBuilder("COSC2634","Building IT Systems", 12,"C").build();
         Course security = new CourseBuilder("COSC2539","Security in Computing and Information Technology",
-                12).build();
-        security.setAvailability("C");
+                12,"C").build();
         Course softENFundamental = new CourseBuilder("ISYS2089","Software Engineering Fundamentals",
-                12).build();
-        softENFundamental.setAvailability("C");
+                12,"C").build();
         Course professionalComp = new CourseBuilder("COSC2130","Professional Computing Practice",
-                12).build();
-        professionalComp.setAvailability("C");
-        Course introToIT = new CourseBuilder("COSC2083","Intro to Information Technology",12).build();
-        introToIT.setAvailability("AC");
-        Course introToProgramming = new CourseBuilder("COSC2429","Intro to Programming",12).build();
-        introToProgramming.setAvailability("AC");
-        Course programmingI = new CourseBuilder("COSC2081","Programming I",12).build();
-        programmingI.setAvailability("AC");
-        Course math = new CourseBuilder("MATH2081","Mathematics for Computing",12).build();
-        math.setAvailability("ABC");
+                12,"C").build();
+        Course introToIT = new CourseBuilder("COSC2083","Intro to Information Technology",12, "AC").build();
+        Course introToProgramming = new CourseBuilder("COSC2429","Intro to Programming",12, "AC").build();
+        Course programmingI = new CourseBuilder("COSC2081","Programming I",12,"AC").build();
+        Course math = new CourseBuilder("MATH2081","Mathematics for Computing",12,"ABC").build();
 
         /* Assigning courses to semesters */
         Chain courseListA = CourseListA.getINSTANCE();
@@ -85,17 +73,17 @@ public class Main {
         student5.setBirthday("12-12-1997");
         student5.subscribe();
 
-        /* Creating student enrolment objects*/
         viewMainMenu();
+
     }
     public static void viewMainMenu() {
-            /* Creating StudentEnrolment objects for every students*/
+            /* Creating StudentEnrollment objects for every students*/
             List<Command> studentEnrolmentList = new ArrayList<>();
             StudentList studentList = StudentList.getINSTANCE();
             /* Iterating through the StudentList object*/
             while (studentList.hasNext())
             {
-                studentEnrolmentList.add(new StudentEnrolment(studentList.next(),48));
+                studentEnrolmentList.add(new StudentEnrollment(studentList.next(),48));
             }
             while (true) {
                 StudentList.printStudentInfo();
@@ -106,14 +94,14 @@ public class Main {
 
                 if (student != null) {
                     try {
-                        StudentEnrolment studentEnrolment = StudentEnrolment.getStudentEnrolment(studentID);
+                        StudentEnrollment studentEnrollment = StudentEnrollment.getStudentEnrolment(studentID);
                         System.out.print("**************************************\n"
-                                +"RMIT Student Enrolment System\n"+
-                                "1. Enrol student in a course\n" +
+                                +"RMIT Student Enrollment System\n"+
+                                "1. Enroll student in a course\n" +
                                 "2. Drop a course\n" +
-                                "3. Update enrolments\n" +
-                                "4. View all current enrolments of the current student\n" +
-                                "5. View enrolments of all students in a particular semester\n" +
+                                "3. Update enrollments\n" +
+                                "4. View all current enrollments of the current student\n" +
+                                "5. View enrollments of all students in a particular semester\n" +
                                 "6. Drop student from all courses \n" +
                                 "7. Quit\n"+
                                 "Your choice: ");
@@ -134,11 +122,11 @@ public class Main {
                                             String courseID = scanner3.nextLine();
                                             Course course3 = CourseListA.courseSearch(courseID.toUpperCase());
                                             if (course3 != null) {
-                                                studentEnrolment.executeEnrol(course3, "A");
-                                                if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                    studentEnrolment.undoEnrol(course3, "A");
+                                                studentEnrollment.executeEnrol(course3, "A");
+                                                if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                    studentEnrollment.undoEnrol(course3, "A");
                                                 }
-                                                if (!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
+                                                if (!StudentEnrollment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
                                                     break;
                                                 }
                                             } else {
@@ -154,11 +142,11 @@ public class Main {
                                             String courseID1 = scanner4.nextLine();
                                             Course course4 = CourseListB.courseSearch(courseID1.toUpperCase());
                                             if (course4 != null) {
-                                                studentEnrolment.executeEnrol(course4, "B");
-                                                if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                    studentEnrolment.undoEnrol(course4, "B");
+                                                studentEnrollment.executeEnrol(course4, "B");
+                                                if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                    studentEnrollment.undoEnrol(course4, "B");
                                                 }
-                                                if (!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
+                                                if (!StudentEnrollment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
                                                     break;
                                                 }
                                             } else {
@@ -175,12 +163,12 @@ public class Main {
                                             String courseID5 = scanner5.nextLine();
                                             Course course5 = CourseListC.courseSearch(courseID5.toUpperCase());
                                             if (course5 != null) {
-                                                studentEnrolment.executeEnrol(course5, "C");
+                                                studentEnrollment.executeEnrol(course5, "C");
 
-                                                if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                    studentEnrolment.undoEnrol(course5, "C");
+                                                if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                    studentEnrollment.undoEnrol(course5, "C");
                                                 }
-                                                if (!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
+                                                if (!StudentEnrollment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
                                                     break;
                                                 }
                                             } else {
@@ -206,17 +194,17 @@ public class Main {
                                 switch (choiceDropA) {
                                     case 1:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("A")) {
+                                            if (studentEnrollment.viewASemesterCourses("A")) {
                                                 System.out.print("Enter course ID: ");
                                                 Scanner scanner7 = new Scanner(System.in);
                                                 String courseID = scanner7.nextLine();
                                                 Course course7 = CourseListA.courseSearch(courseID.toUpperCase());
                                                 if (course7 != null) {
-                                                    studentEnrolment.executeDrop(course7, "A");
-                                                    if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                        studentEnrolment.undoDrop(course7, "A");
+                                                    studentEnrollment.executeDrop(course7, "A");
+                                                    if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                        studentEnrollment.undoDrop(course7, "A");
                                                     }
-                                                    if (!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: ")) {
+                                                    if (!StudentEnrollment.continuePrompt("Dropping another course (Y/n)?: ")) {
                                                         break;
                                                     }
                                                 } else {
@@ -232,17 +220,17 @@ public class Main {
                                         break;
                                     case 2:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("B")) {
+                                            if (studentEnrollment.viewASemesterCourses("B")) {
                                                 System.out.print("Enter course ID: ");
                                                 Scanner scanner8 = new Scanner(System.in);
                                                 String courseID8 = scanner8.nextLine();
                                                 Course course8 = CourseListB.courseSearch(courseID8.toUpperCase());
                                                 if (course8 != null) {
-                                                    studentEnrolment.executeDrop(course8, "B");
-                                                    if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                        studentEnrolment.undoEnrol(course8, "B");
+                                                    studentEnrollment.executeDrop(course8, "B");
+                                                    if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                        studentEnrollment.undoEnrol(course8, "B");
                                                     }
-                                                    if (!StudentEnrolment.continuePrompt("Dropping another course (Y/n)?: ")) {
+                                                    if (!StudentEnrollment.continuePrompt("Dropping another course (Y/n)?: ")) {
                                                         break;
                                                     }
                                                 } else {
@@ -258,17 +246,17 @@ public class Main {
                                         break;
                                     case 3:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("C")) {
+                                            if (studentEnrollment.viewASemesterCourses("C")) {
                                                 System.out.print("Enter course ID: ");
                                                 Scanner scanner5 = new Scanner(System.in);
                                                 String courseID5 = scanner5.nextLine();
                                                 Course course5 = CourseListC.courseSearch(courseID5.toUpperCase());
                                                 if (course5 != null) {
-                                                    studentEnrolment.executeDrop(course5, "C");
-                                                    if (StudentEnrolment.continuePrompt("Undo previous action (Y/n)?: ")) {
-                                                        studentEnrolment.undoEnrol(course5, "C");
+                                                    studentEnrollment.executeDrop(course5, "C");
+                                                    if (StudentEnrollment.continuePrompt("Undo previous action (Y/n)?: ")) {
+                                                        studentEnrollment.undoEnrol(course5, "C");
                                                     }
-                                                    if (!StudentEnrolment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
+                                                    if (!StudentEnrollment.continuePrompt("Enrolling in another course (Y/n)?: ")) {
                                                         break;
                                                     }
                                                 } else {
@@ -300,7 +288,7 @@ public class Main {
                                 switch (choiceUpdateA) {
                                     case 1:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("A")) {
+                                            if (studentEnrollment.viewASemesterCourses("A")) {
                                                 System.out.print("Enter the ID of the course you wish to replace: ");
                                                 Scanner updateAScanner = new Scanner(System.in);
                                                 String oldCourseIDA = updateAScanner.nextLine().toUpperCase();
@@ -308,10 +296,10 @@ public class Main {
                                                 System.out.print("Enter the ID of the new course: ");
                                                 Scanner updateAScanner1 = new Scanner(System.in);
                                                 String newCourseIDA = updateAScanner1.nextLine().toUpperCase();
-                                                Course oldCourseA = studentEnrolment.studentCourseSearch(oldCourseIDA, "A");
+                                                Course oldCourseA = studentEnrollment.studentCourseSearch(oldCourseIDA, "A");
                                                 Course newCourseA = CourseListA.courseSearch(newCourseIDA);
                                                 if (oldCourseA != null && newCourseA != null) {
-                                                    studentEnrolment.update(oldCourseA, newCourseA, "A");
+                                                    studentEnrollment.update(oldCourseA, newCourseA, "A");
                                                     break;
                                                 }
                                             } else {
@@ -323,7 +311,7 @@ public class Main {
                                         break;
                                     case 2:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("B")) {
+                                            if (studentEnrollment.viewASemesterCourses("B")) {
                                                 System.out.print("Enter the ID of the course you wish to replace: ");
                                                 Scanner updateBScanner = new Scanner(System.in);
                                                 String oldCourseIDB = updateBScanner.nextLine().toUpperCase();
@@ -331,14 +319,14 @@ public class Main {
                                                 System.out.print("Enter the ID of the new course: ");
                                                 Scanner updateBScanner1 = new Scanner(System.in);
                                                 String newCourseIDB = updateBScanner1.nextLine().toUpperCase();
-                                                Course oldCourseB = studentEnrolment.studentCourseSearch(oldCourseIDB, "B");
+                                                Course oldCourseB = studentEnrollment.studentCourseSearch(oldCourseIDB, "B");
                                                 Course newCourseB = CourseListA.courseSearch(newCourseIDB);
                                                 if (oldCourseB != null && newCourseB != null) {
-                                                    studentEnrolment.update(oldCourseB, newCourseB, "B");
+                                                    studentEnrollment.update(oldCourseB, newCourseB, "B");
                                                     break;
                                                 }
                                             } else {
-                                                System.out.println("Student is not currently enroled in any course this semester");
+                                                System.out.println("Student is not currently enrolled in any course this semester");
                                                 System.out.println("Returning to main menu");
                                                 break;
                                             }
@@ -346,7 +334,7 @@ public class Main {
                                         break;
                                     case 3:
                                         while (true) {
-                                            if (studentEnrolment.viewASemesterCourses("C")) {
+                                            if (studentEnrollment.viewASemesterCourses("C")) {
                                                 System.out.print("Enter the ID of the course you wish to replace: ");
                                                 Scanner updateCScanner = new Scanner(System.in);
                                                 String oldCourseIDC = updateCScanner.nextLine().toUpperCase();
@@ -354,14 +342,14 @@ public class Main {
                                                 System.out.print("Enter the ID of the new course: ");
                                                 Scanner updateCScanner1 = new Scanner(System.in);
                                                 String newCourseIDC = updateCScanner1.nextLine().toUpperCase();
-                                                Course oldCourseC = studentEnrolment.studentCourseSearch(oldCourseIDC, "C");
+                                                Course oldCourseC = studentEnrollment.studentCourseSearch(oldCourseIDC, "C");
                                                 Course newCourseC = CourseListA.courseSearch(newCourseIDC);
                                                 if (oldCourseC != null && newCourseC != null) {
-                                                    studentEnrolment.update(oldCourseC, newCourseC, "C");
+                                                    studentEnrollment.update(oldCourseC, newCourseC, "C");
                                                     break;
                                                 }
                                             } else {
-                                                System.out.println("Student is not currently enroled in any course this semester");
+                                                System.out.println("Student is not currently enrolled in any course this semester");
                                                 System.out.println("Returning to main menu");
                                                 break;
                                             }
@@ -380,8 +368,8 @@ public class Main {
                                 break;
                             case 4:
                                 while (true) {
-                                    studentEnrolment.viewAllCourses();
-                                    if (StudentEnrolment.continuePrompt("Return to main menu (Y/n)?: ")) {
+                                    studentEnrollment.viewAllCourses();
+                                    if (StudentEnrollment.continuePrompt("Return to main menu (Y/n)?: ")) {
                                         break;
                                     }
                                 }
@@ -394,13 +382,13 @@ public class Main {
                                     int choiceViewAll = scanner3.nextInt();
                                     switch (choiceViewAll) {
                                         case 1:
-                                            studentEnrolment.printAllEnrolments("A");
+                                            studentEnrollment.printAllEnrolments("A");
                                             break;
                                         case 2:
-                                            studentEnrolment.printAllEnrolments("B");
+                                            studentEnrollment.printAllEnrolments("B");
                                             break;
                                         case 3:
-                                            studentEnrolment.printAllEnrolments("C");
+                                            studentEnrollment.printAllEnrolments("C");
                                             break;
                                         case 4:
                                             break;
@@ -413,16 +401,16 @@ public class Main {
                                             break;
 
                                     }
-                                    if (!StudentEnrolment.continuePrompt("View another semester (Y/n)?: ")) {
+                                    if (!StudentEnrollment.continuePrompt("View another semester (Y/n)?: ")) {
                                         break;
                                     }
                                 }
                                 break;
                             case 6:
-                                if(StudentEnrolment.continuePrompt("Are you sure you want to drop all courses(Y/n)? "))
+                                if(StudentEnrollment.continuePrompt("Are you sure you want to drop all courses(Y/n)? "))
                                 {
-                                    StudentEnrolmentVisitor studentEnrolmentDeleter = new StudentEnrolmentVisitor(studentID);
-                                    studentEnrolmentDeleter.visit(studentEnrolment);
+                                    StudentEnrollmentVisitor studentEnrolmentDeleter = new StudentEnrollmentVisitor(studentID);
+                                    studentEnrolmentDeleter.visit(studentEnrollment);
                                 }
 
                                 break;

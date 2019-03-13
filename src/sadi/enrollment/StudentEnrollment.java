@@ -13,7 +13,7 @@ import sadi.visitor.Visitor;
 import java.util.*;
 
 
-public class StudentEnrolment extends StudentEnrolmentManager implements Command, Visitable {
+public class StudentEnrollment extends StudentEnrollmentManager implements Command, Visitable {
     private Student student;
     private static List<Student> studentSubscribers = new ArrayList<>();
     private CourseListA courseListA = CourseListA.getINSTANCE();
@@ -22,24 +22,25 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     private List<Course> studentCourseA = new ArrayList<>();
     private List<Course> studentCourseB = new ArrayList<>();
     private List<Course> studentCourseC = new ArrayList<>();
-    private static Map<String,StudentEnrolment> cache = new HashMap<>();
+    private static Map<String, StudentEnrollment> cache = new HashMap<>(); // Flyweight cache
     private int creditLimit;
-    public StudentEnrolment() {
+
+    public StudentEnrollment() {
     }
 
-    public StudentEnrolment(Student student,int creditLimit) {
+    public StudentEnrollment(Student student, int creditLimit) {
         this.student = student;
         this.creditLimit =creditLimit;
-        cache.put(student.getId(),this);
+        cache.put(student.getId(),this); // Automatically put object into cache
     }
 
-    // Flyweight Pattern
-    public static StudentEnrolment getStudentEnrolment(String studentID)
+    // Flyweight Method
+    public static StudentEnrollment getStudentEnrolment(String studentID)
     {
-        StudentEnrolment studentEnrolment = cache.get(studentID);
-        if (studentEnrolment != null)
+        StudentEnrollment studentEnrollment = cache.get(studentID);
+        if (studentEnrollment != null)
         {
-            return studentEnrolment;
+            return studentEnrollment;
         }
         return null;
     }
@@ -50,19 +51,6 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
 
     public void setStudent(Student student) {
         this.student = student;
-    }
-
-    private boolean creditLimit(List<Course> courseList)
-    {
-        int credits = 0;
-        for (int i = 0; i < courseList.size(); i++) {
-            credits += courseList.get(i).getCredits();
-        }
-        if(credits <= this.creditLimit)
-        {
-            return true;
-        }
-        return false;
     }
 
     public List<Course> getStudentCourseA() {
@@ -97,8 +85,20 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
         this.creditLimit = creditLimit;
     }
 
+    private int creditCount(List<Course> courseList)
+    {
+        // Counting credits for each semester
+        int count = 0;
+        for (int i = 0; i < courseList.size(); i++) {
+            count+= courseList.get(i).getCredits();
+        }
+        return count;
+    }
+
     public void enrol(Course course, String semester) {
-        if (courseListA.getCourseList().contains(course) && semester.equals("A") && !studentCourseA.contains(course) && creditLimit(studentCourseA)
+        if(semester.equals("A")){
+        // Enrol method. Total credits each semester can not exceed 48. Can not allow students to have duplicate courses in the same semester or same year.
+        if (courseListA.getCourseList().contains(course) && semester.equals("A") && !studentCourseA.contains(course) && (creditCount(studentCourseA)<=(this.creditLimit-course.getCredits()))
         && !studentCourseB.contains(course) && !studentCourseC.contains(course))
         {
             studentCourseA.add(course);
@@ -111,15 +111,16 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
                }
             }
         }
-        else if(studentCourseA.contains(course))
+        else if(studentCourseA.contains(course) || studentCourseB.contains(course) || studentCourseC.contains(course))
         {
             System.out.println("The student is already enrolled in this course");
         }
-        else if(!creditLimit(studentCourseA))
+        else if(creditCount(studentCourseA)>(this.creditLimit-course.getCredits()))
         {
             System.out.println("Students are not allowed to take more than 48 credits per semester");
-        }
-        if(courseListB.getCourseList().contains(course) && semester.equals("B") && !studentCourseB.contains(course) && creditLimit(studentCourseB)
+        }}
+        if(semester.equals("B")){
+        if(courseListB.getCourseList().contains(course) && semester.equals("B") && !studentCourseB.contains(course) && creditCount(studentCourseB)<=(this.creditLimit-course.getCredits())
                 && !studentCourseA.contains(course) && !studentCourseC.contains(course))
         {
             studentCourseB.add(course);
@@ -132,16 +133,16 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
                 }
             }
         }
-        else if(studentCourseB.contains(course))
+        else if(studentCourseA.contains(course) || studentCourseB.contains(course) || studentCourseC.contains(course))
         {
             System.out.println("The student is already enrolled in this course");
         }
-        else if(!creditLimit(studentCourseB))
+        else if(creditCount(studentCourseB)>(this.creditLimit-course.getCredits()))
         {
             System.out.println("Students are not allowed to take more than 48 credits per semester");
-        }
-
-        if(courseListC.getCourseList().contains(course) && semester.equals("C") && !studentCourseC.contains(course) && creditLimit(studentCourseC)
+        }}
+        if(semester.equals("C")){
+        if(courseListC.getCourseList().contains(course) && semester.equals("C") && !studentCourseC.contains(course) && creditCount(studentCourseC)<=(this.creditLimit-course.getCredits())
                 && !studentCourseB.contains(course) && !studentCourseA.contains(course))
         {
             studentCourseC.add(course);
@@ -154,14 +155,14 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
                 }
             }
         }
-        else if(studentCourseC.contains(course))
+        else if(studentCourseA.contains(course) || studentCourseB.contains(course) || studentCourseC.contains(course))
         {
             System.out.println("The student is already enrolled in this course");
         }
-        else if(!creditLimit(studentCourseC))
+        else if(creditCount(studentCourseC)>(this.creditLimit-course.getCredits()))
         {
             System.out.println("Students are not allowed to take more than 48 credits per semester");
-        }
+        }}
     }
 
     public static List<Student> getStudentSubscribers() {
@@ -169,11 +170,11 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     }
 
     public static void setStudentSubscribers(List<Student> studentSubscribers) {
-        StudentEnrolment.studentSubscribers = studentSubscribers;
+        StudentEnrollment.studentSubscribers = studentSubscribers;
     }
 
     public Course studentCourseSearch(String courseID, String semester)
-    {
+    {   // Looking into if a student is enrolled in a course in a particular semester
         if(semester.equals("A"))
         {
             for (int i = 0; i < studentCourseA.size(); i++) {
@@ -208,6 +209,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
 
     @Override
     public void drop(Course course, String semester) {
+        // Drop courses method
         if (semester.equals("A"))
         {
             studentCourseA.remove(course);
@@ -258,7 +260,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
 
     @Override
     public String toString() {
-        return "StudentEnrolment{" +
+        return "StudentEnrollment{" +
                 "studentCourseA=" + studentCourseA +
                 ", studentCourseB=" + studentCourseB +
                 ", studentCourseC=" + studentCourseC +
@@ -266,7 +268,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     }
 
     public boolean viewASemesterCourses(String semester)
-    {
+    {   // Displaying current enrolment of a student in a particular semester
         if(semester.equals("A"))
         {
             if(studentCourseA.size() > 0)
@@ -306,6 +308,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
 
     public void viewAllCourses()
     {
+        // Display all enrollment details of a student in a year
         System.out.println("Semester A");
         viewASemesterCourses("A");
         System.out.println("Semester B");
@@ -315,7 +318,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     }
 
     public static boolean continuePrompt(String message)
-    {
+    {   // Reusable generic continue prompt
         System.out.print(message);
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine().toUpperCase();
@@ -330,15 +333,16 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
     }
 
     public void printAllEnrolments(String semester)
-    {
-        for (String key: cache.keySet()
-             ) {
+    {   // Display all students' enrollment details in a particular semester
+        for (String key: cache.keySet()) // Extracting key-value pair from cache
+        {
             System.out.println(StudentList.searchStudent(key).getId() + " - " + StudentList.searchStudent(key).getName());
             cache.get(key).viewASemesterCourses(semester);
             System.out.println("---------------------------------------------");
         }
     }
 
+    /*The command methods*/
     @Override
     public void executeEnrol(Course course, String semester) {
         enrol(course, semester);
@@ -361,6 +365,7 @@ public class StudentEnrolment extends StudentEnrolmentManager implements Command
 
     @Override
     public void accept(Visitor visitor) {
+        // Accept visit from StudentEnrollmentVisitor
         visitor.visit(this);
     }
 }

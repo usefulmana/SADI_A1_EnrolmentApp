@@ -11,10 +11,11 @@ public class Course {
     private String availability;
     private static List<Course> courseList = new ArrayList<>();
 
-    public Course(String courseId, String courseName, int credits) {
+    public Course(String courseId, String courseName, int credits, String availability) {
         this.courseId = courseId;
         this.courseName = courseName;
         this.credits = credits;
+        this.availability = availability;
         courseList.add(this);
     }
 

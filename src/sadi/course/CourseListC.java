@@ -21,8 +21,6 @@ public class CourseListC implements CourseList, Chain {
         for (int i = 0; i < courses.size(); i++) {
             if (courses.get(i).getAvailability().contains("C")) {
                 courseList.add(courses.get(i));
-            } else {
-                System.out.println("Course Unavailable!");
             }
         }
     }

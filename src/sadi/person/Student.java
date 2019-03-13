@@ -1,6 +1,6 @@
 package sadi.person;
 
-import sadi.enrollment.StudentEnrolment;
+import sadi.enrollment.StudentEnrollment;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,13 +12,12 @@ public class Student{
     private String name;
     private Date birthday;
     private StudentList studentList= StudentList.getINSTANCE();
-    private int item = 0;
 
 
     public Student(String id, String name) {
         this.id = id;
         this.name = name;
-        studentList.addStudent(this);
+        studentList.addStudent(this); // Automatically add Student object to StudentList object
     }
 
     public String getId() {
@@ -42,6 +41,7 @@ public class Student{
     }
 
     public void setBirthday(String birthday) {
+        // Parse string into Date object
         try
         {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -76,14 +76,15 @@ public class Student{
                 '}';
     }
 
+    /*Observer pattern methods*/
     public void subscribe()
     {
-        StudentEnrolment.getStudentSubscribers().add(this);
+        StudentEnrollment.getStudentSubscribers().add(this);
     }
 
     public void unsubscribe()
     {
-        StudentEnrolment.getStudentSubscribers().remove(this);
+        StudentEnrollment.getStudentSubscribers().remove(this);
     }
 
 

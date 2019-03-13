@@ -1,7 +1,7 @@
 package sadi.visitor;
 
-import sadi.enrollment.StudentEnrolment;
+import sadi.enrollment.StudentEnrollment;
 
 public interface Visitor {
-    public void visit(StudentEnrolment studentEnrolment);
+    public void visit(StudentEnrollment studentEnrollment);
 }
