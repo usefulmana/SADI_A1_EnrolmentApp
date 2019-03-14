@@ -1,11 +1,2 @@
-Design patterns list:
-- Singleton
-- Builder
-- Visitor
-- Command
-- Chain of responsibilities
-- Iterator
-- Observer
-- Facade (maybe)
-- Composite
-- Decorator 
+Merge conflicts.
+Go to dps branch for the complete project.
